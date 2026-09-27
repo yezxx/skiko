@@ -1,0 +1,81 @@
+diff --git a/skiko/src/nativeJsMain/cpp/DirectContext.cc b/skiko/src/nativeJsMain/cpp/DirectContext.cc
+index b209896..cf0d237 100644
+--- a/skiko/src/nativeJsMain/cpp/DirectContext.cc
++++ b/skiko/src/nativeJsMain/cpp/DirectContext.cc
+@@ -3,6 +3,19 @@
+ #include "common.h"
+ #include "ganesh/gl/GrGLDirectContext.h" // TODO: skia update: check if it's correct
+ 
++#ifdef __linux__
++#include "ganesh/gl/GrGLAssembleInterface.h"
++#include <dlfcn.h>
++#endif
++
++#ifdef __linux__
++// The C++ toolchain that builds these bridges (a recent libstdc++) references the glibc 2.32 data symbol
++// `__libc_single_threaded` from its shared_ptr fast path, while the Kotlin/Native link sysroot ships glibc 2.19
++// and cannot resolve it. Defining it here as 0 selects the conservative multi-threaded path (the same behaviour
++// as a process that has ever started a second thread), which is what this UI does anyway.
++extern "C" char __libc_single_threaded = 0;
++#endif
++
+ #ifdef SK_METAL
+ #include "ganesh/mtl/GrMtlBackendContext.h"
+ #include "ganesh/mtl/GrMtlDirectContext.h"
+@@ -13,8 +26,56 @@
+ #include "ganesh/d3d/GrD3DDirectContext.h"
+ #endif
+ 
++#ifdef __linux__
++// Skia's default GL interface on Linux is GLX-based, and GLX needs an X server. Wayland sessions have no GLX:
++// SDL hands out an EGL context instead, so bind Skia to that context by assembling the interface from
++// `eglGetProcAddress`. libEGL is dlopen'ed (no extra link dependency; the process already has it loaded through
++// SDL), and sessions with a current GLX context keep the previous code path.
++typedef void* (*EglGetCurrentContextFn)();
++typedef void* (*EglGetProcAddressFn)(const char*);
++
++namespace {
++
++GrGLFuncPtr eglProcLoader(void* /* ctx */, const char name[]) {
++    static EglGetProcAddressFn getProcAddress = nullptr;
++    static bool resolved = false;
++    if (!resolved) {
++        resolved = true;
++        if (void* egl = dlopen("libEGL.so.1", RTLD_LAZY | RTLD_LOCAL)) {
++            getProcAddress = reinterpret_cast<EglGetProcAddressFn>(dlsym(egl, "eglGetProcAddress"));
++        }
++    }
++    return getProcAddress == nullptr ? nullptr : reinterpret_cast<GrGLFuncPtr>(getProcAddress(name));
++}
++
++bool hasCurrentEglContext() {
++    static EglGetCurrentContextFn getCurrentContext = nullptr;
++    static bool resolved = false;
++    if (!resolved) {
++        resolved = true;
++        if (void* egl = dlopen("libEGL.so.1", RTLD_LAZY | RTLD_LOCAL)) {
++            getCurrentContext = reinterpret_cast<EglGetCurrentContextFn>(dlsym(egl, "eglGetCurrentContext"));
++        }
++    }
++    return getCurrentContext != nullptr && getCurrentContext() != nullptr;
++}
++
++} // namespace
++#endif
++
+ SKIKO_EXPORT KNativePointer org_jetbrains_skia_DirectContext__1nMakeGL
+   () {
++#ifdef __linux__
++    if (hasCurrentEglContext()) {
++        sk_sp<const GrGLInterface> interface = GrGLMakeAssembledInterface(nullptr, eglProcLoader);
++        if (interface != nullptr) {
++            sk_sp<GrDirectContext> context = GrDirectContexts::MakeGL(interface);
++            if (context != nullptr) {
++                return static_cast<KNativePointer>(context.release());
++            }
++        }
++    }
++#endif
+     return static_cast<KNativePointer>(GrDirectContexts::MakeGL().release());
+ }
+ 

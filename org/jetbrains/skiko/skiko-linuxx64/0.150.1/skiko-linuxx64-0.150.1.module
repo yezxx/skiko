@@ -1,0 +1,85 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../skiko/0.150.1/skiko-0.150.1.module",
+    "group": "org.jetbrains.skiko",
+    "module": "skiko",
+    "version": "0.150.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib"
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.3.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "skiko-linuxX64Main-0.150.1.klib",
+          "url": "skiko-linuxx64-0.150.1.klib",
+          "size": 47142613,
+          "sha512": "ac09f3425e47325a06e8f03e30dc076aa751f48a2c004b83200bbc149ed56269680b62f739cce4b41d606376402bc8b6dcc6f0fcbb44024b34e57363ab3910dd",
+          "sha256": "88574425f9346b9c18a50619dfc188b4f73b647e3ea7a7caaeea0624b042a875",
+          "sha1": "d2c53a6dfa9d5cdfdfe01f11b061d3d1460b4aaa",
+          "md5": "0e383560e76059df6cf21d2d14da8eb6"
+        }
+      ]
+    },
+    {
+      "name": "linuxX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "skiko-linuxx64-0.150.1-sources.jar",
+          "url": "skiko-linuxx64-0.150.1-sources.jar",
+          "size": 256985,
+          "sha512": "a049f761be9bc15fd1ddc5b21db4e01f9bd0a8e40e73df93bcd9f22b33a7c5c74178e8ee53a77ecbb137e6b7704831b832014b1ac06782939b7005cea07ad154",
+          "sha256": "7fff420bd8d07567092707896dc9c53b14b1d7d0f89e0f2cf5636125e25e3755",
+          "sha1": "a59e79803ab34c81cdff72aa57073f336c6078d0",
+          "md5": "1b3c2d88db0b16a40cd4bca1cdb7d223"
+        }
+      ]
+    }
+  ]
+}
