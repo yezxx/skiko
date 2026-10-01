@@ -20,6 +20,14 @@ maven("https://raw.githubusercontent.com/yezxx/skiko/maven") {
 
 or, with GitHub Pages enabled for this repo: `https://yezxx.github.io/skiko`.
 
-Rebuild: see `tools/rebuild.sh` (clones upstream v0.150.1, applies the patch, refreshes the artifacts).
+Rebuild: see `tools/rebuild.sh` (clones upstream v0.150.1, applies the patch, refreshes the artifacts, then runs
+`tools/merge-upstream-variants.py`).
+
+Only `skiko` (metadata jar) and `skiko-linuxx64` (EGL klib) are hosted here; every other variant of the root
+`skiko-0.150.1.module` is re-emitted by `tools/merge-upstream-variants.py` with an **absolute** `available-at` URL to
+Maven Central. Do not hand-edit that file back to a linux-only variant list: since this repository owns the upstream
+coordinates, repository order makes it win for *all* consumers, and a root metadata without e.g. the `iosArm64`/`wasmJs`
+variants fails those targets with `No matching variant of org.jetbrains.skiko:skiko:0.150.1` (Gradle does not fall back
+to the next repository once a module is found).
 
 Licensing: skiko Apache-2.0 (`LICENSE`, `NOTICE`); Skia (embedded in the klib) BSD-3 (`LICENSES/skia-LICENSE.txt`).

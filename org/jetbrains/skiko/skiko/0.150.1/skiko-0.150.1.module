@@ -79,6 +79,56 @@
       ]
     },
     {
+      "name": "androidApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-android/0.150.1/skiko-android-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-android",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "androidRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-android/0.150.1/skiko-android-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-android",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "androidSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-android/0.150.1/skiko-android-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-android",
+        "version": "0.150.1"
+      }
+    },
+    {
       "name": "awtApiElements-published",
       "attributes": {
         "org.gradle.category": "library",
@@ -88,7 +138,7 @@
         "org.jetbrains.kotlin.platform.type": "jvm"
       },
       "available-at": {
-        "url": "../../skiko-awt/0.150.1/skiko-awt-0.150.1.module",
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-awt/0.150.1/skiko-awt-0.150.1.module",
         "group": "org.jetbrains.skiko",
         "module": "skiko-awt",
         "version": "0.150.1"
@@ -104,7 +154,7 @@
         "org.jetbrains.kotlin.platform.type": "jvm"
       },
       "available-at": {
-        "url": "../../skiko-awt/0.150.1/skiko-awt-0.150.1.module",
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-awt/0.150.1/skiko-awt-0.150.1.module",
         "group": "org.jetbrains.skiko",
         "module": "skiko-awt",
         "version": "0.150.1"
@@ -122,9 +172,209 @@
         "org.jetbrains.kotlin.platform.type": "jvm"
       },
       "available-at": {
-        "url": "../../skiko-awt/0.150.1/skiko-awt-0.150.1.module",
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-awt/0.150.1/skiko-awt-0.150.1.module",
         "group": "org.jetbrains.skiko",
         "module": "skiko-awt",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iosarm64/0.150.1/skiko-iosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iosarm64/0.150.1/skiko-iosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iosarm64/0.150.1/skiko-iosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iossimulatorarm64/0.150.1/skiko-iossimulatorarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iossimulatorarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iossimulatorarm64/0.150.1/skiko-iossimulatorarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iossimulatorarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iossimulatorarm64/0.150.1/skiko-iossimulatorarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iossimulatorarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iosx64/0.150.1/skiko-iosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iosx64/0.150.1/skiko-iosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-iosx64/0.150.1/skiko-iosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-iosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "jsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-js/0.150.1/skiko-js-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-js",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "jsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-js/0.150.1/skiko-js-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-js",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "jsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-js/0.150.1/skiko-js-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-js",
         "version": "0.150.1"
       }
     },
@@ -138,7 +388,7 @@
         "org.jetbrains.kotlin.platform.type": "native"
       },
       "available-at": {
-        "url": "../../skiko-linuxarm64/0.150.1/skiko-linuxarm64-0.150.1.module",
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-linuxarm64/0.150.1/skiko-linuxarm64-0.150.1.module",
         "group": "org.jetbrains.skiko",
         "module": "skiko-linuxarm64",
         "version": "0.150.1"
@@ -156,7 +406,7 @@
         "org.jetbrains.kotlin.platform.type": "native"
       },
       "available-at": {
-        "url": "../../skiko-linuxarm64/0.150.1/skiko-linuxarm64-0.150.1.module",
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-linuxarm64/0.150.1/skiko-linuxarm64-0.150.1.module",
         "group": "org.jetbrains.skiko",
         "module": "skiko-linuxarm64",
         "version": "0.150.1"
@@ -193,6 +443,306 @@
         "url": "../../skiko-linuxx64/0.150.1/skiko-linuxx64-0.150.1.module",
         "group": "org.jetbrains.skiko",
         "module": "skiko-linuxx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-macosarm64/0.150.1/skiko-macosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-macosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "macosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-macosarm64/0.150.1/skiko-macosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-macosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-macosarm64/0.150.1/skiko-macosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-macosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-macosx64/0.150.1/skiko-macosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-macosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "macosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-macosx64/0.150.1/skiko-macosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-macosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-macosx64/0.150.1/skiko-macosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-macosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosArm64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvosarm64/0.150.1/skiko-tvosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvosarm64/0.150.1/skiko-tvosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosArm64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvosarm64/0.150.1/skiko-tvosarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvosarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvossimulatorarm64/0.150.1/skiko-tvossimulatorarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvossimulatorarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvossimulatorarm64/0.150.1/skiko-tvossimulatorarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvossimulatorarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvossimulatorarm64/0.150.1/skiko-tvossimulatorarm64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvossimulatorarm64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvosx64/0.150.1/skiko-tvosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvosx64/0.150.1/skiko-tvosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-tvosx64/0.150.1/skiko-tvosx64-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-tvosx64",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "wasmJsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-wasm-js/0.150.1/skiko-wasm-js-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-wasm-js",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "wasmJsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-wasm-js/0.150.1/skiko-wasm-js-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-wasm-js",
+        "version": "0.150.1"
+      }
+    },
+    {
+      "name": "wasmJsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "https://repo.maven.apache.org/maven2/org/jetbrains/skiko/skiko-wasm-js/0.150.1/skiko-wasm-js-0.150.1.module",
+        "group": "org.jetbrains.skiko",
+        "module": "skiko-wasm-js",
         "version": "0.150.1"
       }
     }
